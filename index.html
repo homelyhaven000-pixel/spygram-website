@@ -129,7 +129,7 @@
       text-decoration: none;
     }
 
-    .nav-logo svg { width: 36px; height: 36px; }
+    .nav-logo svg, .nav-logo .logo-img { width: 36px; height: 36px; object-fit: contain; }
 
     .nav-logo span {
       font-family: 'Syne', sans-serif;
@@ -330,6 +330,21 @@
     .btn-outline:hover {
       border-color: #D81B60;
       background: rgba(216, 27, 96, 0.06);
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     }
 
     /* Hero Phone Mockup */
@@ -1204,7 +1219,7 @@
         padding: 14px 16px;
       }
 
-      .nav-logo svg {
+      .nav-logo svg, .nav-logo .logo-img {
         width: 30px;
         height: 30px;
       }
@@ -1279,37 +1294,7 @@
 <!-- Navbar -->
 <nav class="navbar" id="navbar">
   <a href="#" class="nav-logo">
-    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Dark background -->
-      <rect width="64" height="64" rx="18" fill="#050510"/>
-      <!-- Outer border gradient -->
-      <rect x="1.5" y="1.5" width="61" height="61" rx="16.5" stroke="url(#logoGrad)" stroke-width="3"/>
-      <!-- Fedora Hat -->
-      <rect x="16" y="13" width="32" height="4" rx="2" stroke="#3D5AFE" stroke-width="2.2"/>
-      <rect x="10" y="17" width="44" height="3.5" rx="1.75" stroke="url(#logoGrad)" stroke-width="2.2"/>
-      <!-- Camera Body (Instagram-style squircle) -->
-      <rect x="12" y="22" width="40" height="40" rx="13" stroke="url(#logoGrad)" stroke-width="2.2"/>
-      <!-- Flash dot -->
-      <circle cx="46" cy="30" r="2.2" fill="#FFD600"/>
-      <!-- Magnifying glass -->
-      <circle cx="32" cy="41" r="10" stroke="#D81B60" stroke-width="2.5"/>
-      <!-- Magnifying glass handle -->
-      <line x1="39.5" y1="48.5" x2="44.5" y2="53.5" stroke="#FB8C00" stroke-width="2.8" stroke-linecap="round"/>
-      <!-- Eye inside magnifying glass -->
-      <ellipse cx="32" cy="41" rx="5.5" ry="3.5" stroke="#8E24AA" stroke-width="1.8" fill="none"/>
-      <circle cx="33" cy="41" r="1.5" fill="#FFD600"/>
-      <!-- Eye pupil -->
-      <circle cx="33.5" cy="41" r="0.7" fill="#050510"/>
-      <defs>
-        <linearGradient id="logoGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#3D5AFE"/>
-          <stop offset="25%" stop-color="#8E24AA"/>
-          <stop offset="55%" stop-color="#D81B60"/>
-          <stop offset="78%" stop-color="#FB8C00"/>
-          <stop offset="100%" stop-color="#FFD600"/>
-        </linearGradient>
-      </defs>
-    </svg>
+    <img src="logo.svg" alt="Spygram Logo" class="logo-img">
     <span>Spygram</span>
   </a>
   <ul class="nav-links">
@@ -1329,7 +1314,7 @@
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag"><span class="dot"></span> #1 Instagram Analytics Tool</div>
-      <h1>See Who's <span class="gradient-text">Watching</span> Your Instagram</h1>
+      <h1>Instagram <span class="gradient-text">Private Profile</span> Viewer</h1>
       <p>Unlock powerful insights into your Instagram audience. Track story viewers, view private profiles anonymously, and analyze your engagement — all in one sleek app.</p>
       <div class="hero-btns">
         <a href="#download" class="btn-primary">
@@ -1441,6 +1426,11 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- Hero Banner -->
+<section class="hero-banner">
+  <img src="hero-banner.png" alt="Instagram Private Profile Viewer">
 </section>
 
 <!-- Features Section -->
